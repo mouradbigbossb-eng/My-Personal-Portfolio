@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hi, I'm MOURAD</title>
+    <link rel="stylesheet" href="style.css" />
+    <noscript>
+      <style>
+        body.booting .screen {
+          visibility: visible;
+        }
+        .boot-screen {
+          display: none;
+        }
+      </style>
+    </noscript>
+  </head>
+  <body class="crt-on booting">
+    <!-- مؤشر القناة العلوي -->
+    <div class="tv-osd" id="tvOsd">CH-01 GREEN</div>
+
+    <!-- Task Bar مع زر الهامبرغر -->
+    <header>
+      <div class="Task_Bar">
+        <div class="logo">MOURAD</div>
+        <button
+          class="hamburger"
+          id="hamburgerBtn"
+          aria-label="Toggle Navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="navMenu">
+          <a href="#About">About</a>
+          <a href="#Skills">Skills</a>
+          <a href="#Projects">Projects</a>
+          <a href="#Contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="About">
+      <main class="screen">
+        <h1>Hello, I'm</h1>
+        <h1>Mourad</h1>
+        <p>Tech creator and passionate developer</p>
+        <p>
+          I don't just write code — I craft visual experiences. I work as a web
+          developer (HTML, CSS, JS) and C++ programmer,
+        </p>
+        <p>
+          while also building 3D worlds in Blender and telling visual stories
+          with DaVinci Resolve.
+        </p>
+        <p>
+          My broad expertise extends to designing professional presentations in
+          PowerPoint and managing tasks efficiently in Word and Excel.
+        </p>
+        <p>
+          My goal is to deliver exceptional quality in every project I complete.
+        </p>
+        <button id="crtToggle">ON/OFF</button>
+      </main>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="Skills">
+      <div class="Skills">
+        <h1>Skills</h1>
+        <p>Click on any card to explore more details about my expertise.</p>
+
+        <div class="skills_carts">
+          <article class="card active">
+            <div class="card-header">
+              <div class="card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="36"
+                  height="36"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                >
+                  <path
+                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                  ></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                </svg>
+              </div>
+              <h3>Office</h3>
+            </div>
+            <div class="card-body">
+              <p>
+                I can use the most important Office programs (Word / Excel /
+                PowerPoint) efficiently for document creation, data management,
+                and impactful presentations.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <div class="card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="36"
+                  height="36"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                >
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3>Development</h3>
+            </div>
+            <div class="card-body">
+              <p>
+                Building modern responsive web applications using HTML, CSS,
+                JavaScript, and developing fast logic and algorithms in C++.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <div class="card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="36"
+                  height="36"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                >
+                  <path
+                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                  ></path>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                </svg>
+              </div>
+              <h3>3D & Video</h3>
+            </div>
+            <div class="card-body">
+              <p>
+                Creating immersive 3D environments and assets in Blender,
+                combined with high-quality visual storytelling using DaVinci
+                Resolve.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="Projects">
+      <div class="Projects">
+        <h1>Projects</h1>
+        <p>
+          Here are some of my creations, works in progress, and creative
+          milestones.
+        </p>
+
+        <div class="projects_carts">
+          <article class="card project-card">
+            <div class="card-icon">
+              <svg
+                viewBox="0 0 24 24"
+                width="36"
+                height="36"
+                stroke="currentColor"
+                stroke-width="2"
+                fill="none"
+              >
+                <line x1="6" y1="12" x2="10" y2="12"></line>
+                <line x1="8" y1="10" x2="8" y2="14"></line>
+                <circle cx="15" cy="11" r="1" fill="currentColor"></circle>
+                <circle cx="17" cy="13" r="1" fill="currentColor"></circle>
+                <path
+                  d="M17.4 6.6c-1.8-1.8-4.7-1.8-6.5 0l-5.4 5.4c-1.6 1.6-1.6 4.1 0 5.7 1.6 1.6 4.1 1.6 5.7 0l1.3-1.3h3l1.3 1.3c1.6 1.6 4.1 1.6 5.7 0 1.6-1.6 1.6-4.1 0-5.7l-5.1-5.4z"
+                ></path>
+              </svg>
+            </div>
+            <h3>Games</h3>
+            <p>under dev - Some mini games</p>
+            <a href="#" class="card-btn">View</a>
+          </article>
+
+          <article class="card project-card">
+            <div class="card-icon">
+              <svg
+                viewBox="0 0 24 24"
+                width="36"
+                height="36"
+                stroke="currentColor"
+                stroke-width="2"
+                fill="none"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path
+                  d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                ></path>
+              </svg>
+            </div>
+            <h3>Web Projects</h3>
+            <p>
+              under dev - Professional websites with visual delights & C++ backend logic.
+            </p>
+            <a href="#" class="card-btn">View</a>
+          </article>
+
+          <article class="card project-card">
+            <div class="card-icon">
+              <svg
+                viewBox="0 0 24 24"
+                width="36"
+                height="36"
+                stroke="currentColor"
+                stroke-width="2"
+                fill="none"
+              >
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                ></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <h3>3D Blender</h3>
+            <p>under dev - Creating immersive 3D worlds and models.</p>
+            <a href="#" class="card-btn">View</a>
+          </article>
+
+          <article class="card project-card">
+            <div class="card-icon">
+              <svg
+                viewBox="0 0 24 24"
+                width="36"
+                height="36"
+                stroke="currentColor"
+                stroke-width="2"
+                fill="none"
+              >
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+                <polygon
+                  points="10 8 16 11 10 14 10 8"
+                  fill="currentColor"
+                ></polygon>
+              </svg>
+            </div>
+            <h3>PowerPoint</h3>
+            <p>
+              under dev - Best professional presentations designed for impact and clarity.
+            </p>
+            <a href="#" class="card-btn">View</a>
+          </article>
+
+          <article class="card project-card">
+            <div class="card-icon">
+              <svg
+                viewBox="0 0 24 24"
+                width="36"
+                height="36"
+                stroke="currentColor"
+                stroke-width="2"
+                fill="none"
+              >
+                <rect
+                  x="2"
+                  y="2"
+                  width="20"
+                  height="20"
+                  rx="2.18"
+                  ry="2.18"
+                ></rect>
+                <line x1="7" y1="2" x2="7" y2="22"></line>
+                <line x1="17" y1="2" x2="17" y2="22"></line>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+              </svg>
+            </div>
+            <h3>Video Editing</h3>
+            <p>under dev - Crafting visual stories with DaVinci Resolve.</p>
+            <a href="#" class="card-btn">View</a>
+          </article>
+
+          <article class="card project-card">
+            <div class="card-icon">
+              <svg
+                viewBox="0 0 24 24"
+                width="36"
+                height="36"
+                stroke="currentColor"
+                stroke-width="2"
+                fill="none"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                ></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+            </div>
+            <h3>Office Tasks</h3>
+            <p>
+              under dev - Efficient document management and data organization in Word &
+              Excel.
+            </p>
+            <a href="#" class="card-btn">View</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="Contact">
+      <div class="Contact">
+        <h1>Contact Me</h1>
+        <p>
+          Have a project in mind or want to collaborate? Send me a message
+          below!
+        </p>
+
+        <form
+          class="contact-form"
+          action="https://formspree.io/f/xvkaznqn"
+          method="POST"
+        >
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="service">Requested Service</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Select a service</option>
+              <option value="Web Development">Web Development</option>
+              <option value="C++ Programming">C++ Programming</option>
+              <option value="3D Design (Blender)">3D Design (Blender)</option>
+              <option value="Video Editing">Video Editing</option>
+              <option value="Office / PowerPoint">Office / PowerPoint</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Describe the details of your project..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="contact-btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-content">
+        <p>© 2026 MOURAD. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="https://github.com/mouradbigbossb-eng" target="_blank" aria-label="GitHub"
+            >GitHub</a
+          >
+          <span>•</span>
+          <a href="https://www.instagram.com/mourad_t.3/" target="_blank" aria-label="LinkedIn"
+            >Instagram</a
+          >
+          <span>•</span>
+          <a href="#About" class="back-to-top">▲ Top</a>
+        </div>
+      </div>
+    </footer>
+    <!-- Boot-up intro -->
+    <div class="boot-screen" aria-hidden="true">
+      <pre class="boot-lines"></pre>
+      <div class="boot-bar"><span></span></div>
+      <div class="boot-hint">CLICK OR PRESS ANY KEY TO SKIP</div>
+    </div>
+
+    <!-- TV layers -->
+    <div class="crt-overlay"></div>
+    <div class="glitch-layer"></div>
+    <div class="tv-frame"></div>
+
+    <!-- Bottom panel -->
+    <div class="tv-plate">
+      <div class="tv-group">
+        <span class="tv-label">CH</span>
+        <button class="tv-btn" data-act="ch-down" aria-label="Previous channel">
+          &#9664;
+        </button>
+        <button class="tv-btn" data-act="ch-up" aria-label="Next channel">
+          &#9654;
+        </button>
+      </div>
+
+      <div class="tv-group">
+        <span class="tv-label">BRIGHT</span>
+        <button
+          class="tv-btn"
+          data-act="dim-down"
+          aria-label="Decrease brightness"
+        >
+          &minus;
+        </button>
+        <button
+          class="tv-btn"
+          data-act="dim-up"
+          aria-label="Increase brightness"
+        >
+          +
+        </button>
+      </div>
+
+      <span class="tv-brand">OldTV</span>
+
+      <div class="tv-group">
+        <button class="tv-btn" data-act="glitch" aria-pressed="true">
+          GLITCH
+        </button>
+        <span class="tv-led"></span>
+        <button
+          class="tv-btn tv-power"
+          data-act="power"
+          aria-label="Toggle TV power"
+        >
+          &#9211;
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
