@@ -589,3 +589,69 @@ footer {
 body:not(.crt-on) footer {
   padding-bottom: 2rem;
 }
+/* =====================================================
+   إصلاح سريع لشاشات الهواتف المحمولة (Mobile Fixes)
+   ===================================================== */
+@media (max-width: 768px) {
+  
+  /* 1. إزالة إطار التلفزيون والأطباق تماماً من الهواتف لتفادي المشاكل */
+  .tv-frame,
+  .crt-overlay,
+  .glitch-layer,
+  .tv-plate,
+  .tv-osd {
+    display: none !important;
+  }
+
+  /* جعل خلفية الصفحة والهوامش ملائمة تماماً للموبايل */
+  body {
+    padding: 20px 15px !important;
+    font-size: 16px !important;
+    background: var(--bg);
+  }
+
+  /* 2. إصلاح تناسك بطاقات المهارات (Skills) على الجوال */
+  .skills_carts {
+    flex-direction: column !important;
+    width: 100% !important;
+    min-height: auto !important;
+    gap: 1.5rem !important;
+  }
+
+  .skills_carts .card {
+    flex: none !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    padding: 1.5rem !important;
+  }
+
+  /* إلغاء تأثير التمدد المعقد وجعل البطاقة تفتح بشكل عمودي واضح */
+  .skills_carts .card.active {
+    flex: none !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 1.5rem !important;
+    gap: 1rem !important;
+  }
+
+  .skills_carts .card.active .card-header {
+    align-items: center !important;
+    min-width: auto !important;
+  }
+
+  .skills_carts .card.active .card-body {
+    max-width: 100% !important;
+    opacity: 1 !important;
+  }
+
+  .card-body p {
+    text-align: center !important;
+  }
+
+  /* تصحيح مقاسات العناوين والنصوص على الهاتف */
+  h1 {
+    font-size: 2rem !important;
+  }
+}
