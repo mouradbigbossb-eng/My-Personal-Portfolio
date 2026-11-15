@@ -434,7 +434,6 @@ section {
 @keyframes crt-turn-on { 0% { transform: scaleY(0.005) scaleX(0.6); filter: brightness(8); opacity: 0; } 40% { transform: scaleY(0.005) scaleX(1); filter: brightness(6); opacity: 1; } 100% { transform: scaleY(1) scaleX(1); filter: brightness(1); opacity: 1; } }
 @keyframes edge-noise { 0% { background-position: 0 0; } 50% { background-position: 0 7px; } 100% { background-position: 0 0; } }
 
-/* عندما يكون الثيم مطفأ (crt-on غير موجودة) */
 body:not(.crt-on) {
   padding: 80px 20px 20px !important;
   text-shadow: none;
@@ -453,87 +452,7 @@ html:has(body:not(.crt-on)) {
 .crt-overlay::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: rgba(0, 0, 0, var(--dim)); }
 
 /* =====================================================
-   Responsive Media Queries & Hamburger Menu
-   ===================================================== */
-@media (max-width: 868px) {
-  :root {
-    --frame-top: 12px;
-    --frame-side: 12px;
-    --frame-bottom: 55px;
-    --screen-radius: 35px / 25px;
-  }
-
-  body {
-    font-size: 18px;
-    padding: calc(var(--frame-top) + 12px) calc(var(--frame-side) + 12px) calc(var(--frame-bottom) + 12px);
-  }
-
-  .hamburger { display: flex; }
-
-  body:not(.crt-on) nav {
-    position: fixed;
-    top: 60px;
-    right: -100%;
-    width: 220px;
-    background: color-mix(in srgb, var(--bg) 95%, #000);
-    border: 1px solid rgba(var(--rgb), 0.3);
-    border-radius: 12px;
-    padding: 1.5rem;
-    flex-direction: column;
-    gap: 1.2rem;
-    transition: right 0.4s ease;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
-  }
-
-  body:not(.crt-on) nav.active {
-    right: 20px;
-  }
-
-  .skills_carts {
-    flex-direction: column;
-    min-height: auto;
-  }
-
-  .skills_carts .card {
-    width: 100%;
-    height: auto;
-    min-height: 100px;
-  }
-
-  .skills_carts .card.active {
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
-    padding: 1.5rem;
-  }
-
-  .skills_carts .card.active .card-header {
-    align-items: center;
-    min-width: auto;
-  }
-
-  .card-body p {
-    text-align: center;
-  }
-
-  .tv-plate {
-    padding: 0 10px;
-  }
-
-  .tv-brand {
-    display: none;
-  }
-
-  .tv-btn {
-    min-width: 32px;
-    height: 26px;
-    padding: 0 6px;
-    font-size: 10px;
-  }
-}
-
-/* =====================================================
-   Footer Styles (فوتر خفيف وظريف)
+   Footer Styles
    ===================================================== */
 footer {
   width: 100%;
@@ -585,16 +504,16 @@ footer {
   color: rgba(var(--rgb), 0.4);
 }
 
-/* تعديل مسافة الفوتر عند إيقاف التلفزيون */
 body:not(.crt-on) footer {
   padding-bottom: 2rem;
 }
+
 /* =====================================================
-   إصلاح سريع لشاشات الهواتف المحمولة (Mobile Fixes)
+   إصلاح شامل لمشاكل الأبعاد وإطار التلفزيون على الجوال
    ===================================================== */
 @media (max-width: 768px) {
   
-  /* 1. إزالة إطار التلفزيون والأطباق تماماً من الهواتف لتفادي المشاكل */
+  /* 1. إخفاء إطار التلفزيون وطبقات الـ CRT والأزرار السفلية */
   .tv-frame,
   .crt-overlay,
   .glitch-layer,
@@ -603,37 +522,73 @@ body:not(.crt-on) footer {
     display: none !important;
   }
 
-  /* جعل خلفية الصفحة والهوامش ملائمة تماماً للموبايل */
-  body {
-    padding: 20px 15px !important;
-    font-size: 16px !important;
-    background: var(--bg);
+  /* 2. تفعيل وضبط شريط المهام العلوي (Task Bar) وقائمة الهامبرغر مع عكس الاتجاه ليتناسب مع RTL */
+  .Task_Bar {
+    display: flex !important;
+    flex-direction: row-reverse !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 10002;
+    padding: 15px 20px;
+    background: color-mix(in srgb, var(--bg) 90%, #000);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(var(--rgb), 0.25);
   }
 
-  /* 2. إصلاح تناسك بطاقات المهارات (Skills) على الجوال */
+  .hamburger {
+    display: flex !important;
+  }
+
+  body > header nav {
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 220px;
+    background: color-mix(in srgb, var(--bg) 95%, #000);
+    border: 1px solid rgba(var(--rgb), 0.3);
+    border-radius: 12px;
+    padding: 1.5rem;
+    flex-direction: column;
+    gap: 1.2rem;
+    transition: right 0.4s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+    z-index: 10003;
+  }
+
+  body > header nav.active {
+    right: 20px;
+  }
+
+  /* 3. ضبط هوامش الصفحة لتظهر تحت شريط المهام بشكل مثالي */
+  body {
+    padding: 80px 15px 30px 15px !important;
+    font-size: 16px !important;
+    overflow-x: hidden;
+  }
+
+  /* 4. إخفاء زر التلفزيون (ON/OFF) في قسم About على الجوال */
+  #crtToggle {
+    display: none !important;
+  }
+
+  /* 5. ترتيب بطاقات المهارات والمشاريع ونماذج التواصل */
   .skills_carts {
     flex-direction: column !important;
     width: 100% !important;
-    min-height: auto !important;
-    gap: 1.5rem !important;
+    gap: 1.2rem !important;
   }
 
-  .skills_carts .card {
-    flex: none !important;
-    width: 100% !important;
-    height: auto !important;
-    min-height: auto !important;
-    padding: 1.5rem !important;
-  }
-
-  /* إلغاء تأثير التمدد المعقد وجعل البطاقة تفتح بشكل عمودي واضح */
+  .skills_carts .card,
   .skills_carts .card.active {
     flex: none !important;
     flex-direction: column !important;
+    width: 100% !important;
+    height: auto !important;
     align-items: center !important;
     text-align: center !important;
     padding: 1.5rem !important;
-    gap: 1rem !important;
   }
 
   .skills_carts .card.active .card-header {
@@ -650,8 +605,15 @@ body:not(.crt-on) footer {
     text-align: center !important;
   }
 
-  /* تصحيح مقاسات العناوين والنصوص على الهاتف */
+  .projects_carts {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contact-form {
+    padding: 1.5rem !important;
+  }
+
   h1 {
-    font-size: 2rem !important;
+    font-size: 2.2rem !important;
   }
 }
